@@ -1,0 +1,86 @@
+{
+  "expo": {
+    "name": "Travel Companion",
+    "slug": "travel-companion",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "travelcompanion",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/images/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.yourcompany.travelcompanion",
+      "buildNumber": "1.0.0",
+      "config": {
+        "googleMapsApiKey": "AIzaSyDjr_I5KjmlOYE9ZLv_lCJWzK6MruJjYew",
+        "usesNonExemptEncryption": false
+      },
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "We need your location to show you nearby places and attractions.",
+        "NSLocationAlwaysUsageDescription": "We need your location to show you nearby places and attractions.",
+        "NSCameraUsageDescription": "We need access to your camera to let you take photos for your travel memories.",
+        "NSPhotoLibraryUsageDescription": "We need access to your photo library to let you save and share your travel memories."
+      }
+    },
+    "android": {
+      "package": "com.yourcompany.travelcompanion",
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "permissions": [
+        "CAMERA",
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE"
+      ],
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyDjr_I5KjmlOYE9ZLv_lCJWzK6MruJjYew"
+        }
+      }
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow Travel Companion to use your location to show nearby places and attractions."
+        }
+      ],
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow Travel Companion to access your camera to capture travel memories."
+        }
+      ],
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "Allow Travel Companion to access your photos.",
+          "savePhotosPermission": "Allow Travel Companion to save photos.",
+          "isAccessMediaLocationEnabled": true
+        }
+      ]
+    ],
+    "experiments": {
+      "tsconfigPaths": true,
+      "typedRoutes": true
+    }
+  }
+}
